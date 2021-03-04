@@ -12,7 +12,7 @@ def z6_23(number: int, a: int, x: int, y: int, z: int) -> None:
     print(f'в) Сумма цифр, больших {a}: {len([i for i in str(number) if int(i) > a])}')
     print(f'г) Цифры {x} и {y} встречаются {str(number).count(str(x)) + str(number).count(str(y))} раз(-а)')
 
-def z6_24(numbers: map, x: int) -> None:
+def z6_24(numbers: list, x: int) -> None:
     print(f'Сумма всех чисел, больших {x}: {sum([i for i in numbers if i > x])}')
     print(f'Количество чётных чисел последовательности: {len([i for i in numbers if i % 2 == 0])}')
 
@@ -34,7 +34,7 @@ z6_23(number=int(input("Число n: ")),
       x=int(input("Число x: ")),
       y=int(input("Число y: ")),
       z=int(input("Число z: ")))
-z6_24(numbers=map(int, input("Введите последовательность чисел: ").split()), x=int(input("Число x: ")))
+z6_24(numbers=list(map(int, input("Введите последовательность чисел: ").split())), x=int(input("Число x: ")))
 z6_25(numbers=tuple(map(int, input("Введите последовательность чисел: ").split())))
 z6_26(n=int(input("Введите натуральное число: ")))
 z6_27(n=int(input("Введие натуральное число: ")))
